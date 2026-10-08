@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Ọjà — You won't shop at one.</title>
+</head>
+<body>
+<div class="utility-bar">
+  <div class="utility-inner">
+    <span>Delivering <strong style="color:var(--cream)"> NATIONWIDE</strong></span>
+    <div class="utility-links">
+      <a href="#">Sell on Ọjà</a>
+      <a href="#">Track order</a>
+      <a href="#">Help</a>
+      <a href="#">NGN ₦</a>
+    </div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">Ọjà<span class="dot">.</span> online wholesales marketplace</a>
+    <div class="search-wrap">
+      <input id="searchInput" type="text" placeholder="Search for phones, fabric, rice, sneakers...">
+      <button id="searchBtn">Search</button>
+    </div>
+    <div class="nav-actions">
+      <a href="#" class="nav-icon-btn"><span>👤</span>Account</a>
+      <button class="nav-icon-btn" id="cartBtn"><span>🧺</span>Cart<span class="cart-count" id="cartCount">0</span></button>
+    </div>
+  </div>
+</header>
+
+<div class="ticker">
+  <div class="ticker-inner">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+</div>
+
+<div class="cat-rail" id="catRail"></div>
+
+<section class="hero">
+  <div class="hero-main">
+    <div class="hero-eyebrow">Lagos Rain Sale · Ends in the countdown →</div>
+    <h1>Everything the market sells.<br>Everyone the market trusts.</h1>
+    <p>From Alaba electronics, Balogun fabric, GL lane at trade fair, Idumota one of biggeest jewellery market in lagos Ọjà brings 40,000+ verified sellers into one basket — with delivery you can actually track.</p>
+    <a href="#trending" class="hero-cta">Shop the sale →</a>
+  </div>
+  <div class="hero-side">
+    <div>
+      <div class="side-label">Flash sale ends in</div>
+      <div class="countdown" id="countdown"></div>
+    </div>
+    <div class="side-deal-card">
+      <div class="side-deal-swatch" style="background:linear-gradient(135deg,#E8A33D,#B23A2E);"></div>
+      <div class="side-deal-info">
+        <div class="name">Ankara Print Bundle (6 yds)</div>
+        <div class="price">₦8,400 <span class="was">₦14,000</span></div>
+      </div>
+    </div>
+    <div class="side-deal-card">
+      <div class="side-deal-swatch" style="background:linear-gradient(135deg,#2F6B4E,#1C1730);"></div>
+      <div class="side-deal-info">
+        <div class="name">15W Fast-Charge Power Bank</div>
+        <div class="price">₦11,200 <span class="was">₦16,500</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="value-band">
+  <div class="value-card"><div class="ic">🚚</div><div><h4>Same-day in Lagos</h4><p>Real-time tracking from seller to doorstep.</p></div></div>
+  <div class="value-card"><div class="ic">↩️</div><div><h4>7-day returns</h4><p>Free pickup if it isn't right.</p></div></div>
+  <div class="value-card"><div class="ic">🔒</div><div><h4>Pay on delivery</h4><p>Or card, transfer, and wallet — your call.</p></div></div>
+  <div class="value-card"><div class="ic">✅</div><div><h4>Verified sellers only</h4><p>Every vendor is ID-checked and rated.</p></div></div>
+</div>
+
+<section class="section" id="trending">
+  <div class="section-head">
+    <h2>Trending right now</h2>
+    <a href="#" class="see-all">See all →</a>
+  </div>
+  <div class="grid" id="trendingGrid"></div>
+</section>
+
+<section class="section" id="newin">
+  <div class="section-head">
+    <h2>Just landed</h2>
+    <a href="#" class="see-all">See all →</a>
+  </div>
+  <div class="grid" id="newGrid"></div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Ọjà<span style="color:var(--rust)">.</span></div>
+      <p class="tag">One market, every seller. Built for Lagos, growing across West Africa.</p>
+    </div>
+    <div><h5>Shop</h5><ul><li><a href="#">Phones & Tablets</a></li><li><a href="#">Fashion</a></li><li><a href="#">Home & Living</a></li><li><a href="#">Groceries</a></li></ul></div>
+    <div><h5>Help</h5><ul><li><a href="#">Track my order</a></li><li><a href="#">Returns</a></li><li><a href="#">Contact support</a></li><li><a href="#">Report an issue</a></li></ul></div>
+    <div><h5>Sell</h5><ul><li><a href="#">Start selling</a></li><li><a href="#">Seller dashboard</a></li><li><a href="#">Fees & payouts</a></li></ul></div>
+    <div><h5>Company</h5><ul><li><a href="#">About Ọjà</a></li><li><a href="#">Careers</a></li><li><a href="#">Trust & safety</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">This is a demo storefront prototype — no real payments or orders are processed.</div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-head">
+    <h3>Your basket</h3>
+    <button class="drawer-close" id="drawerClose">×</button>
+  </div>
+  <div class="drawer-items" id="drawerItems"></div>
+  <div class="drawer-foot" id="drawerFoot">
+    <div class="drawer-total-row"><span>Delivery</span><span id="deliveryFee">₦0</span></div>
+    <div class="drawer-total-row grand"><span>Total</span><span id="grandTotal">₦0</span></div>
+    <button class="checkout-btn" id="checkoutBtn">Checkout →</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ======================================================================
+// Ọjà frontend — connected to the real backend in /oja-backend
+// Change API_BASE if you deploy the backend somewhere other than
+// http://localhost:4000 (e.g. a Render/Railway URL).
+// ======================================================================
+const API_BASE = "http://localhost:4000/api";
+
+// A cart id generated once per page load. Because artifacts/browsers here
+// can't rely on persistent storage, this is an in-memory id — refreshing
+// the page starts a new guest cart, same as the original prototype.
+const CART_ID = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()));
+let authToken = null; // set after login/register
+
+function fmt(n){ return "₦" + Number(n).toLocaleString(); }
+function swatch(c1,c2){ return `linear-gradient(135deg, ${c1}, ${c2})`; }
+
+async function api(path, { method = "GET", body, auth = false } = {}) {
+  const headers = { "Content-Type": "application/json", "X-Cart-Id": CART_ID };
+  if (auth && authToken) headers["Authorization"] = `Bearer ${authToken}`;
+  const res = await fetch(`${API_BASE}${path}`, {
+    method,
+    headers,
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error || `Request failed (${res.status})`);
+  return data;
+}
+
+function productSVG(g){
+  const gid = "g" + g[0].replace('#','') + g[1].replace('#','');
+  return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="${gid}" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="${g[0]}"/><stop offset="1" stop-color="${g[1]}"/>
+    </linearGradient></defs>
+    <rect x="8" y="8" width="84" height="84" rx="18" fill="url(#${gid})"/>
+    <circle cx="50" cy="50" r="20" fill="rgba(255,255,255,0.18)"/>
+  </svg>`;
+}
+
+function cardHTML(p){
+  const g = [p.colorFrom, p.colorTo];
+  const discount = p.wasPrice ? Math.round(100 - (p.price / p.wasPrice * 100)) : null;
+  const outOfStock = p.stock <= 0;
+  return `
+  <div class="card">
+    <div class="card-media" style="background:${swatch(g[0],g[1])}">
+      ${discount ? `<div class="tag-discount">-${discount}%</div>` : (p.badge ? `<div class="tag-badge">${p.badge}</div>` : "")}
+      ${productSVG(g)}
+    </div>
+    <div class="card-body">
+      <div class="card-cat">${p.category}</div>
+      <div class="card-name">${p.name}</div>
+      <div class="card-rating">★ ${p.rating} <span class="count">(${Number(p.ratingCount).toLocaleString()})</span></div>
+      <div class="card-price-row">
+        <span class="card-price">${fmt(p.price)}</span>
+        ${p.wasPrice ? `<span class="card-was">${fmt(p.wasPrice)}</span>` : ""}
+      </div>
+      <button class="add-btn" data-id="${p.id}" ${outOfStock ? "disabled" : ""}>${outOfStock ? "Out of stock" : "Add to basket"}</button>
+    </div>
+  </div>`;
+}
+
+// ---------- categories ----------
+async function loadCategories(){
+  const cats = await api('/categories');
+  const catRail = document.getElementById('catRail');
+  catRail.innerHTML = `<button class="cat-pill active" data-cat="All"><span class="ic">🧺</span>All</button>` +
+    cats.map(c => `<button class="cat-pill" data-cat="${c.id}"><span class="ic">${c.icon}</span>${c.name}</button>`).join("");
+  catRail.addEventListener('click', e => {
+    const btn = e.target.closest('.cat-pill');
+    if(!btn) return;
+    document.querySelectorAll('.cat-pill').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.cat;
+    loadProducts();
+  });
+}
+
+// ---------- ticker (still illustrative copy — not backed by an events API) ----------
+const tickerMsgs = [
+  "Ada in Ikeja just bought a Kente-Weave Ankara Bundle",
+  "127 people are viewing Voltra Power Bank right now",
+  "Free delivery today on orders over ₦20,000 in Lagos",
+  "Chidi in Abuja just bought a Nimbus X12 Smartphone",
+  "Flash sale: up to 30% off Home & Living",
+  "New sellers onboarded this week: 214",
+];
+document.getElementById('tickerTrack').innerHTML = tickerMsgs.concat(tickerMsgs).map(m=>`<span>${m}</span>`).join("");
+
+// ---------- products ----------
+let currentFilter = "All";
+async function loadProducts(){
+  const q = document.getElementById('searchInput').value.trim();
+  const params = new URLSearchParams();
+  if (currentFilter !== "All") params.set('category', currentFilter);
+  if (q) params.set('q', q);
+
+  const grid = document.getElementById('trendingGrid');
+  const showFilteredView = Boolean(q) || currentFilter !== "All";
+  document.querySelector('#trending .section-head h2').textContent = showFilteredView ? "Results" : "Trending right now";
+  document.getElementById('newin').style.display = showFilteredView ? "none" : "block";
+
+  grid.innerHTML = `<div style="grid-column:1/-1; padding:40px 0; text-align:center; color:var(--ink-soft);">Loading…</div>`;
+  try {
+    const products = await api(`/products?${params.toString()}`);
+    if (products.length === 0) {
+      grid.innerHTML = `<div style="grid-column:1/-1; padding:40px 0; text-align:center; color:var(--ink-soft);">No products match "${q || currentFilter}". Try another search.</div>`;
+    } else if (showFilteredView) {
+      grid.innerHTML = products.map(cardHTML).join("");
+    } else {
+      grid.innerHTML = products.slice(0, 5).map(cardHTML).join("");
+      document.getElementById('newGrid').innerHTML = products.slice(5, 10).map(cardHTML).join("");
+    }
+    attachAddButtons();
+  } catch (err) {
+    grid.innerHTML = `<div style="grid-column:1/-1; padding:40px 0; text-align:center; color:var(--rust);">
+      Couldn't reach the Ọjà API at ${API_BASE}.<br>
+      Make sure the backend is running: <code>node server.js</code> inside <code>oja-backend/</code>.<br>
+      <span style="font-size:12px; opacity:0.7;">(${err.message})</span>
+    </div>`;
+  }
+}
+
+document.getElementById('searchBtn').addEventListener('click', loadProducts);
+document.getElementById('searchInput').addEventListener('keydown', e => { if(e.key==='Enter') loadProducts(); });
+
+function attachAddButtons(){
+  document.querySelectorAll('.add-btn').forEach(btn=>{
+    if (btn.disabled) return;
+    btn.addEventListener('click', async () => {
+      const id = parseInt(btn.dataset.id);
+      const original = btn.textContent;
+      try {
+        await api('/cart/items', { method: 'POST', body: { productId: id, quantity: 1 } });
+        await refreshCartUI();
+        showToast("Added to basket");
+        btn.textContent = "Added ✓";
+        btn.classList.add('added');
+        setTimeout(()=>{ btn.textContent = original; btn.classList.remove('added'); }, 1200);
+      } catch (err) {
+        showToast(err.message);
+      }
+    });
+  });
+}
+
+// ---------- cart ----------
+async function refreshCartUI(){
+  let cart;
+  try {
+    cart = await api('/cart');
+  } catch (err) {
+    document.getElementById('cartCount').textContent = "!";
+    return;
+  }
+  document.getElementById('cartCount').textContent = cart.items.reduce((s,i)=>s+i.quantity, 0);
+
+  const itemsEl = document.getElementById('drawerItems');
+  const footEl = document.getElementById('drawerFoot');
+  if (cart.items.length === 0){
+    itemsEl.innerHTML = `<div class="drawer-empty"><div style="font-size:40px;">🧺</div><div style="font-weight:700;">Your basket is empty</div><div style="font-size:13px;">Add something from the market to get started.</div></div>`;
+    footEl.style.display = "none";
+    return;
+  }
+  footEl.style.display = "block";
+  itemsEl.innerHTML = cart.items.map(item => `
+    <div class="drawer-item" data-id="${item.productId}">
+      <div class="drawer-item-media" style="background:${swatch(item.colorFrom, item.colorTo)}"></div>
+      <div class="drawer-item-info">
+        <div class="name">${item.name}</div>
+        <div class="price">${fmt(item.price)}</div>
+        <div class="qty-ctrl">
+          <button class="minus">−</button>
+          <span class="n">${item.quantity}</span>
+          <button class="plus">+</button>
+          <span class="remove-x">Remove</span>
+        </div>
+      </div>
+    </div>`).join("");
+
+  document.getElementById('deliveryFee').textContent = cart.deliveryFee === 0 ? "Free" : fmt(cart.deliveryFee);
+  document.getElementById('grandTotal').textContent = fmt(cart.total);
+
+  itemsEl.querySelectorAll('.drawer-item').forEach(row=>{
+    const id = parseInt(row.dataset.id);
+    const qtyLabel = row.querySelector('.n');
+    row.querySelector('.plus').addEventListener('click', async ()=>{
+      const newQty = parseInt(qtyLabel.textContent) + 1;
+      await api('/cart/items', { method: 'PUT', body: { productId: id, quantity: newQty } });
+      refreshCartUI();
+    });
+    row.querySelector('.minus').addEventListener('click', async ()=>{
+      const newQty = parseInt(qtyLabel.textContent) - 1;
+      await api('/cart/items', { method: 'PUT', body: { productId: id, quantity: newQty } });
+      refreshCartUI();
+    });
+    row.querySelector('.remove-x').addEventListener('click', async ()=>{
+      await fetch(`${API_BASE}/cart/items/${id}`, { method: 'DELETE', headers: { 'X-Cart-Id': CART_ID } });
+      refreshCartUI();
+    });
+  });
+}
+
+// ---------- drawer open/close ----------
+const drawer = document.getElementById('drawer');
+const overlay = document.getElementById('overlay');
+function openDrawer(){ drawer.classList.add('open'); overlay.classList.add('open'); }
+function closeDrawer(){ drawer.classList.remove('open'); overlay.classList.remove('open'); }
+document.getElementById('cartBtn').addEventListener('click', openDrawer);
+document.getElementById('drawerClose').addEventListener('click', closeDrawer);
+overlay.addEventListener('click', closeDrawer);
+
+document.getElementById('checkoutBtn').addEventListener('click', async ()=>{
+  try {
+    const result = await api('/orders/checkout', {
+      method: 'POST',
+      auth: true,
+      body: { deliveryAddress: "12 Marina Road, Lagos (demo address)" },
+    });
+    showToast(`Order placed — #${result.order.id.slice(0,8)}`);
+    closeDrawer();
+    refreshCartUI();
+    loadProducts(); // stock has changed
+  } catch (err) {
+    showToast(err.message);
+  }
+});
+
+// ---------- toast ----------
+let toastTimer;
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=> t.classList.remove('show'), 2600);
+}
+
+// ---------- countdown (illustrative — flash-sale timer isn't a stored deadline yet) ----------
+function renderCountdown(seconds){
+  const h = Math.floor(seconds/3600);
+  const m = Math.floor((seconds%3600)/60);
+  const s = seconds%60;
+  const parts = [[h,"HRS"],[m,"MIN"],[s,"SEC"]];
+  document.getElementById('countdown').innerHTML = parts.map(([v,l])=>
+    `<div class="box"><div class="num">${String(v).padStart(2,'0')}</div><div class="lbl">${l}</div></div>`
+  ).join("");
+}
+let remaining = 6*3600 + 42*60 + 10;
+renderCountdown(remaining);
+setInterval(()=>{
+  remaining = remaining > 0 ? remaining - 1 : 0;
+  renderCountdown(remaining);
+}, 1000);n 
+
+// ---------- boot ----------
+(async function init(){
+  await loadCategories();
+  await loadProducts();
+  await refreshCartUI();
+})();
+</script>
+</body>
+</html>
